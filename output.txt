@@ -1,0 +1,271 @@
+Loop Nest: 1
+	Num. of Load/Store Instructions: 1
+	Loop: for.body
+	Loop control variable:   %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next, %for.body ]
+	Num. of Ref Groups: 1
+	Ref Group 1:
+		Members: 
+			  %0 = load i32, ptr %arrayidx, align 4, !tbaa !6
+		Leader:   %0 = load i32, ptr %arrayidx, align 4, !tbaa !6
+		Cost: 512
+	Loop Cost: 512
+
+Loop Nest: 2
+	Num. of Load/Store Instructions: 2
+	Loop: for.body
+	Loop control variable:   %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next, %for.body ]
+	Num. of Ref Groups: 2
+	Ref Group 1:
+		Members: 
+			  %0 = load i32, ptr %arrayidx, align 4, !tbaa !6
+		Leader:   %0 = load i32, ptr %arrayidx, align 4, !tbaa !6
+		Cost: 512
+	Ref Group 2:
+		Members: 
+			  store i32 %add, ptr %arrayidx2, align 4, !tbaa !6
+		Leader:   store i32 %add, ptr %arrayidx2, align 4, !tbaa !6
+		Cost: 512
+	Loop Cost: 1024
+
+Loop Nest: 3
+	Num. of Load/Store Instructions: 4
+	Loop: for.body
+	Loop control variable:   %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next, %for.body ]
+	Num. of Ref Groups: 2
+	Ref Group 1:
+		Members: 
+			  %0 = load i32, ptr %arrayidx, align 4, !tbaa !6
+			  store i32 %add7, ptr %arrayidx9, align 4, !tbaa !6
+		Leader:   %0 = load i32, ptr %arrayidx, align 4, !tbaa !6
+		Cost: 512
+	Ref Group 2:
+		Members: 
+			  %1 = load i32, ptr %arrayidx2, align 4, !tbaa !6
+			  %2 = load i32, ptr %arrayidx6, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx6, align 4, !tbaa !6
+		Cost: 512
+	Loop Cost: 1024
+
+Loop Nest: 4
+	Num. of Load/Store Instructions: 4
+	Loop: for.body
+	Loop control variable:   %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next, %for.body ]
+	Num. of Ref Groups: 2
+	Ref Group 1:
+		Members: 
+			  %1 = load i32, ptr %arrayidx, align 4, !tbaa !6
+			  store i32 %add7, ptr %arrayidx9, align 4, !tbaa !6
+		Leader:   %1 = load i32, ptr %arrayidx, align 4, !tbaa !6
+		Cost: 256
+	Ref Group 2:
+		Members: 
+			  %2 = load i32, ptr %arrayidx2, align 4, !tbaa !6
+			  %3 = load i32, ptr %arrayidx6, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx2, align 4, !tbaa !6
+		Cost: 256
+	Loop Cost: 512
+
+Loop Nest: 5
+	Num. of Load/Store Instructions: 4
+	Loop: for.body
+	Loop control variable:   %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next, %for.body ]
+	Num. of Ref Groups: 2
+	Ref Group 1:
+		Members: 
+			  %2 = load i32, ptr %arrayidx, align 4, !tbaa !6
+			  store i32 %add7, ptr %arrayidx10, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx, align 4, !tbaa !6
+		Cost: 255
+	Ref Group 2:
+		Members: 
+			  %3 = load i32, ptr %arrayidx2, align 4, !tbaa !6
+			  %4 = load i32, ptr %arrayidx6, align 4, !tbaa !6
+		Leader:   %4 = load i32, ptr %arrayidx6, align 4, !tbaa !6
+		Cost: 255
+	Loop Cost: 510
+
+Loop Nest: 6
+	Num. of Load/Store Instructions: 5
+	Loop: for.cond1.preheader
+	Loop control variable:   %indvars.iv55 = phi i64 [ 0, %entry ], [ %indvars.iv.next56, %for.inc34 ]
+	Num. of Ref Groups: 5
+	Ref Group 1:
+		Members: 
+			  %4 = load i32, ptr %arrayidx9, align 4, !tbaa !6
+		Leader:   %4 = load i32, ptr %arrayidx9, align 4, !tbaa !6
+		Cost: 130050
+	Ref Group 2:
+		Members: 
+			  store i32 %add10, ptr %arrayidx16, align 4, !tbaa !6
+		Leader:   store i32 %add10, ptr %arrayidx16, align 4, !tbaa !6
+		Cost: 130050
+	Ref Group 3:
+		Members: 
+			  %6 = load i32, ptr %arrayidx21, align 4, !tbaa !6
+		Leader:   %6 = load i32, ptr %arrayidx21, align 4, !tbaa !6
+		Cost: 130050
+	Ref Group 4:
+		Members: 
+			  %7 = load i32, ptr %arrayidx26, align 4, !tbaa !6
+		Leader:   %7 = load i32, ptr %arrayidx26, align 4, !tbaa !6
+		Cost: 130050
+	Ref Group 5:
+		Members: 
+			  store i32 %add27, ptr %arrayidx33, align 4, !tbaa !6
+		Leader:   store i32 %add27, ptr %arrayidx33, align 4, !tbaa !6
+		Cost: 130050
+	Loop Cost: 650250
+
+	Loop: for.body3
+	Loop control variable:   %indvars.iv = phi i64 [ 1, %for.cond1.preheader ], [ %indvars.iv.next, %for.body3 ]
+	Num. of Ref Groups: 3
+	Ref Group 1:
+		Members: 
+			  %4 = load i32, ptr %arrayidx9, align 4, !tbaa !6
+			  %7 = load i32, ptr %arrayidx26, align 4, !tbaa !6
+		Leader:   %7 = load i32, ptr %arrayidx26, align 4, !tbaa !6
+		Cost: 130050
+	Ref Group 2:
+		Members: 
+			  store i32 %add10, ptr %arrayidx16, align 4, !tbaa !6
+			  %6 = load i32, ptr %arrayidx21, align 4, !tbaa !6
+		Leader:   store i32 %add10, ptr %arrayidx16, align 4, !tbaa !6
+		Cost: 130050
+	Ref Group 3:
+		Members: 
+			  store i32 %add27, ptr %arrayidx33, align 4, !tbaa !6
+		Leader:   store i32 %add27, ptr %arrayidx33, align 4, !tbaa !6
+		Cost: 130050
+	Loop Cost: 390150
+
+Loop Nest: 7
+	Num. of Load/Store Instructions: 3
+	Loop: for.cond1.preheader
+	Loop control variable:   %indvars.iv51 = phi i64 [ 0, %entry ], [ %indvars.iv.next52, %for.inc27 ]
+	Num. of Ref Groups: 3
+	Ref Group 1:
+		Members: 
+			  %1 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Leader:   %1 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Cost: 133955584
+	Ref Group 2:
+		Members: 
+			  %2 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Cost: 133955584
+	Ref Group 3:
+		Members: 
+			  store i32 %add17, ptr %arrayidx23, align 4, !tbaa !6
+		Leader:   store i32 %add17, ptr %arrayidx23, align 4, !tbaa !6
+		Cost: 133955584
+	Loop Cost: 401866752
+
+	Loop: for.cond4.preheader
+	Loop control variable:   %indvars.iv46 = phi i64 [ 1, %for.cond1.preheader ], [ %indvars.iv.next47, %for.inc24 ]
+	Num. of Ref Groups: 3
+	Ref Group 1:
+		Members: 
+			  %1 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Leader:   %1 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Cost: 133955584
+	Ref Group 2:
+		Members: 
+			  %2 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Cost: 133955584
+	Ref Group 3:
+		Members: 
+			  store i32 %add17, ptr %arrayidx23, align 4, !tbaa !6
+		Leader:   store i32 %add17, ptr %arrayidx23, align 4, !tbaa !6
+		Cost: 133955584
+	Loop Cost: 401866752
+
+	Loop: for.body6
+	Loop control variable:   %indvars.iv = phi i64 [ 0, %for.cond4.preheader ], [ %indvars.iv.next, %for.body6 ]
+	Num. of Ref Groups: 3
+	Ref Group 1:
+		Members: 
+			  %1 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Leader:   %1 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Cost: 133955584
+	Ref Group 2:
+		Members: 
+			  %2 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Cost: 133955584
+	Ref Group 3:
+		Members: 
+			  store i32 %add17, ptr %arrayidx23, align 4, !tbaa !6
+		Leader:   store i32 %add17, ptr %arrayidx23, align 4, !tbaa !6
+		Cost: 133955584
+	Loop Cost: 401866752
+
+Loop Nest: 8
+	Num. of Load/Store Instructions: 4
+	Loop: for.cond1.preheader
+	Loop control variable:   %indvars.iv61 = phi i64 [ 0, %entry ], [ %indvars.iv.next62, %for.inc35 ]
+	Num. of Ref Groups: 3
+	Ref Group 1:
+		Members: 
+			  %0 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Leader:   %0 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Cost: 133693952
+	Ref Group 2:
+		Members: 
+			  %1 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+			  %2 = load i32, ptr %arrayidx24, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx24, align 4, !tbaa !6
+		Cost: 133693952
+	Ref Group 3:
+		Members: 
+			  store i32 %add25, ptr %arrayidx31, align 4, !tbaa !6
+		Leader:   store i32 %add25, ptr %arrayidx31, align 4, !tbaa !6
+		Cost: 133693952
+	Loop Cost: 401081856
+
+	Loop: for.cond4.preheader
+	Loop control variable:   %indvars.iv57 = phi i64 [ 0, %for.cond1.preheader ], [ %indvars.iv.next58, %for.inc32 ]
+	Num. of Ref Groups: 3
+	Ref Group 1:
+		Members: 
+			  %0 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+			  %1 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Leader:   %0 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Cost: 133693952
+	Ref Group 2:
+		Members: 
+			  %2 = load i32, ptr %arrayidx24, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx24, align 4, !tbaa !6
+		Cost: 133693952
+	Ref Group 3:
+		Members: 
+			  store i32 %add25, ptr %arrayidx31, align 4, !tbaa !6
+		Leader:   store i32 %add25, ptr %arrayidx31, align 4, !tbaa !6
+		Cost: 133693952
+	Loop Cost: 401081856
+
+	Loop: for.body6
+	Loop control variable:   %indvars.iv = phi i64 [ 0, %for.cond4.preheader ], [ %indvars.iv.next, %for.body6 ]
+	Num. of Ref Groups: 4
+	Ref Group 1:
+		Members: 
+			  %0 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Leader:   %0 = load i32, ptr %arrayidx10, align 4, !tbaa !6
+		Cost: 133693952
+	Ref Group 2:
+		Members: 
+			  %1 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Leader:   %1 = load i32, ptr %arrayidx16, align 4, !tbaa !6
+		Cost: 133693952
+	Ref Group 3:
+		Members: 
+			  %2 = load i32, ptr %arrayidx24, align 4, !tbaa !6
+		Leader:   %2 = load i32, ptr %arrayidx24, align 4, !tbaa !6
+		Cost: 133693952
+	Ref Group 4:
+		Members: 
+			  store i32 %add25, ptr %arrayidx31, align 4, !tbaa !6
+		Leader:   store i32 %add25, ptr %arrayidx31, align 4, !tbaa !6
+		Cost: 133693952
+	Loop Cost: 534775808
+
